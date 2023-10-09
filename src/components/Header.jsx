@@ -3,6 +3,7 @@ import  Container  from './Container.jsx'
 import React from 'react'
 import Logo from './Logo.jsx'
 import Navlinks from './Navlinks.jsx'
+import Button from './Button.jsx'
 
 const Header = () => {
   return (
@@ -18,6 +19,9 @@ const Header = () => {
         <Navlinks></Navlinks>
     </div>
     {/*Buttons*/}
+    <div className='flex items-center gap-6'>
+        <Button href="#">Get Advice</Button>
+    </div>
     {/*Mobile Navlinks*/}
 
 </Container>
