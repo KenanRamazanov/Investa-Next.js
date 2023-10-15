@@ -82,13 +82,18 @@ const Header = () => {
                                 {title}
                               </MobileNavLinks>
                             ))}
+                            </div>
+                          <div className="mt-8 flex flex-col gap-4">
+                            <Button href="#" variant="outline">
+                              Get Advice
+                            </Button>
+                            <Button href="#">Hire me</Button>
                           </div>
                         </Popover.Panel>
-        </>
-    )}
-
-    </AnimatePresence>
-    </>
+                      </>
+                    )}
+                  </AnimatePresence>
+                </>
 )}
 </Popover>
 </Container>
