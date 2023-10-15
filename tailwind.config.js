@@ -11,7 +11,10 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
-      animation:{
+      colors: ({ colors }) => ({
+        gray: colors.neutral,
+      }),
+      animation: {
         "fade-in": "fade-in 0.5s linear forwards",
         marquee: "marquee var(--marquee-duration) linear infinite",
         "spin-slow": "spin 4s linear infinite",
@@ -19,8 +22,28 @@ module.exports = {
         "spin-reverse": "spin-reverse 1s linear infinite",
         "spin-reverse-slow": "spin-reverse 4s linear infinite",
         "spin-reverse-slower": "spin-reverse 6s linear infinite",
-      }
+      },
+      keyframes: {
+        "fade-in": {
+          from: {
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
+          },
+        },
+        marquee: {
+          "100%": {
+            transform: "translateY(-50%)",
+          },
+        },
+        "spin-reverse": {
+          to: {
+            transform: "rotate(-360deg)",
+          },
+        },
+      },
     },
   },
   plugins: [],
-}
+};
