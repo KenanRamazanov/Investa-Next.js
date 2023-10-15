@@ -5,6 +5,7 @@ import Image from 'next/image';
 import appstore from '../images/logos/playStore.png'
 import {BsPlayCircle} from "react-icons/bs"
 import Button from './Button';
+import ExtraLogos from './ExtraLogos';
 const Hero = () => {
   return (
     <section
@@ -23,14 +24,18 @@ const Hero = () => {
               to sell to avoid painful losses.
             </p>
      <div className="mt-8 flex flex-wrap items-center gap-x-6 fap-4">
-        <Image src={appstore} className="w-32 h-auto"/>
+        <Image src={appstore} className="w-32 h-auto" alt="playImg"/>
         <Button variant="outline" href='#'>
             <BsPlayCircle className="text-xl"/>   <span className="ml-2.5"> Watch the video</span>
         </Button>
         </div>       
     </div>
     {/*Left side */}
+     <div className="relative mt-10 sm:mt-20 lg:col-span-5 
+     lg:row-span-2 lg:mt-0 xl:col-span-6">
 
+     </div>
+     <ExtraLogos/>
 </div>
 
 </Container>
