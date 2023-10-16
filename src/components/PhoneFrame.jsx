@@ -28,7 +28,8 @@ const PhoneFrame = ({className,children,priority = false,...props}) => {
       <PlaceholderFrame className="pointer-events-none absolute inset-0 h-full w-full fill-gray-100"/>
       <Image src={frame}
        alt='frame'
-        className="pointer-events-noneabsolute inset-0 h-full w-full"
+        className="pointer-events-none
+absolute inset-0 h-full w-full"
         unoptimized 
         priority={priority} />
   </div>
