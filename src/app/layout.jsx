@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import './globals.css'
 import { Container } from 'postcss'
+import Footer from '@/components/Footer'
 
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
       <body >
         <Header></Header>
         {children}
+        <Footer></Footer>
         </body>
     </html>
   )
