@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
 import { features } from "./FrameView";
 import CircleBackground from "./CircleBackground";
+import PhoneFrame from "./PhoneFrame";
 
 const usePrevious = (value) =>{
     let ref = useRef()
@@ -65,9 +66,34 @@ const DesktopView = () => {
 }
     </Tab.List>
     <div className="relative col-span-6">
-    <div>
+    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <CircleBackground color="#2563eb"  className="animate-spin-slow" />
     </div>
+    <PhoneFrame className="z-10 mx-auto w-full max-w-[366px]">
+<Tab.Panels as={Fragment}>
+<AnimatePresence
+initial={false}
+custom={{ isForwards, changeCount }}
+>
+{features.map((feature, featureIndex) =>
+                selectedIndex === featureIndex ? (
+                  <Tab.Panel
+                    static
+                    key={feature.name + changeCount}
+                    className="col-start-1 row-start-1 flex focus:outline-offset-[32px]
+                     [&:not(:focus-visible)]:focus:outline-none"
+                  >
+
+<feature.screen
+                      animated
+                      custom={{ isForwards, changeCount }}
+                    />
+                  </Tab.Panel>
+                ) : null
+              )}
+</AnimatePresence>
+</Tab.Panels>
+    </PhoneFrame>
     </div>
    </Tab.Group>
   )
