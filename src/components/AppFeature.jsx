@@ -217,11 +217,11 @@ const AppFeature = () => {
                 onChangeActivePointIndex={setActivePointIndex}
               />
             </div>
-        
+            {/*  */}
             <div className="mt-4 rounded-lg bg-blue-500 px-4 py-2 text-center text-sm font-semibold text-white">
               Trade
             </div>
-            
+            {/*  */}
             <div className="mt-3 divide-y divide-gray-100 text-sm">
               <div className="flex justify-between py-1">
                 <div className="text-gray-500">Open</div>
