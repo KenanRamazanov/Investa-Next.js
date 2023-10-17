@@ -30,7 +30,7 @@ const Feature = () => {
 <DesktopView/>
 </div>
 {/*Mobile view*/}
-<div className="mt-16 md:hidden" >
+<div className=" mt-16 md:hidden " >
   <MobileView />
 </div>
 
