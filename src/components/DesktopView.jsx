@@ -99,4 +99,11 @@ custom={{ isForwards, changeCount }}
   )
 }
 
+
+export const MobileView =()=>{
+  let [activeIndex, setActiveIndex] = useState(0);
+  let slideContainerRef = useRef();
+  let slideRefs = useRef([]);
+}
+
 export default DesktopView
