@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from './Container'
 import Title from './Title'
-import DesktopView from './DesktopView'
+import DesktopView, { MobileView } from './DesktopView'
 
 const Feature = () => {
   return (
@@ -30,6 +30,9 @@ const Feature = () => {
 <DesktopView/>
 </div>
 {/*Mobile view*/}
+<div>
+  <MobileView className="mt-16 md:hidden xl:hidden "/>
+</div>
 
 </section>  
 )
