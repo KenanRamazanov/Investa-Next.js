@@ -1,6 +1,6 @@
 "use client"
 import  Container  from './Container.jsx'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from './Logo.jsx'
 import Navlinks from './Navlinks.jsx'
 import Button from './Button.jsx'
@@ -22,8 +22,24 @@ return (
 }
 
 const Header = () => {
+const[isScrolled,setIscrolled] = useState(false)
+const handleScroll = () => {
+const scrollY = window.scrollY;
+setIscrolled(scrollY > 50);
+}
+
+useEffect(()=>{
+  if(typeof window !== "undefined"){
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }
+},[])
+
   return (
- <header>
+ <header  className={`w-full sticky top-0 z-50 bg-white  ${
+  isScrolled && "shadow-xl shadow-blue-100"
+}`}>
     <nav>
 <Container className='relative z-50 flex justify-between py-8'>
     {/*Logo*/}
