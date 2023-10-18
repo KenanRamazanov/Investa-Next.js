@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from './Container'
 import Title from './Title'
+import ReviewGrid from './ReviewGrid'
 
 const Reviews = () => {
   return (
@@ -16,6 +17,7 @@ const Reviews = () => {
         <p className="mt-2 text-lg text-gray-600 sm:text-center">
           Thousands of people have doubled their net-worth in the last 30 days.
         </p>
+        <ReviewGrid/>
 </Container>
     </section>
   )
